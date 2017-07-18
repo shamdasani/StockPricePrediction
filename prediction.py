@@ -51,7 +51,6 @@ print(forecast_set, accuracy, forecast)
 
 # Fix date + time issues
 # RIGHT NOW: Data is just shifting back 5 places as seen in forecast variable
-'''
 
 df['Forecast'] = np.nan
 
@@ -65,7 +64,6 @@ for i in forecast_set:
 	next_date = datetime.datetime.fromtimestamp(next_unix)
 	next_unix += one_day
 	df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)] + [i]
-'''
 
 # Plotting on Graph
 style.use('ggplot')
